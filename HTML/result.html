@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac Exam Result</title>
+    <link rel="stylesheet" href="CSS/result.css">
+    <link rel="shortcut icon" href="CSS/Favicon/MAC Favicon.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <div>
+        <form action="GET" id="resultForm" class="resultBox Visibility">
+            <div class="Instruction">
+                <h1>Maulana Azad College of Arts, Science & Commerce</h1>
+                <h1>Dr. Rafiq Zakaria Campus</h1>
+                <h2>Rauza Bagh, Aurangabad, Maharastra</h2>
+            </div>
+            <div class="Instruction">
+                <h1>XI - Exam Result</h1>
+                <p>
+                    Fill Your Correct Information Below...
+                </p>
+            </div>
+            <input required type="text" name="CandidateName" id="candidateName" class="candidateInfo"
+                placeholder="Enter Your Name">
+            <input required type="text" name="CandidateRollNo" id="candidateRollNo" class="candidateInfo"
+                placeholder="Enter Your Roll No">
+            <select name="CandidateFaculty" id="facultyInfo" class="candidateInfo">
+                <option value="Select Your Faculty">Select Your Faculty...</option>
+                <option value="Science">Science</option>
+                <option value="Commerce">Commerce</option>
+                <option value="Arts">Arts</option>
+            </select>
+            <input type="submit" value="Check Your Result" id="submitButton">
+            <div id="notice">
+                <span>Notice</span>
+                <ol>
+                    <li>
+                        WH = Withheld (Contact office)
+                    </li>
+                    <li>
+                        Distribution of marks memo and admission as per schedule from 6 may onward
+                    </li>
+                    <li>
+                        Non-Grant students can also fill EBC form
+                    </li>
+                    <li>
+                        OV = Office Verification
+                    </li>
+                </ol>
+            </div>
+        </form>
+    </div>
+    <div id="resultPage" class="resultSheet">
+        
+    </div>
+    <script src="JavaScript/result.js"></script>
+</body>
+</html>

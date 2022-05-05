@@ -1,0 +1,19 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "MAC Result",
+  "main": "backend-database.js",
+  "scripts": {
+    "nodemon": "nodemon backend-database.js",
+    "start": "node backend-database.js"
+  },
+  "keywords": [],
+  "author": "Shaikh Adil",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "heroku-ssl-redirect": "^0.1.1",
+    "mongoose": "^6.3.2",
+    "nodemon": "^2.0.15"
+  }
+}
