@@ -1,30 +1,30 @@
-// CREATING VARIABLES
+// BACKEND
 const express = require('express');
-const mongoose = require('mongoose')
 const path = require('path');
-const app = express();
-const port = process.env.PORT || 5057;
-
-const Student = require('./student')
+const route = express();
+const port = process.env.PORT || 5050;
 
 // RESULT DATABASE
-mongoose.connect("mongodb://localhost:27017/macdatabase", 
-{ useNewUrlParser: true, useUnifiedTopology: true });
+const xlsx = require('xlsx');
+
+let resultSheet = xlsx.readFile('XI Result 2022.xlsx');
+let sheet = resultSheet.Sheets["Sheet1"];
+
+let jsonSheet = xlsx.utils.sheet_to_json(sheet);
 
 // PAGINATION
-app.use(express.static(path.join(__dirname, '/')))
+route.use(express.static(path.join(__dirname, '/')))
 
-app.get('/',(req, res) => {
+route.get('/',(req, res) => {
     res.status(200).sendFile(path.join(__dirname, 'HTML/result.html'))
 });
 
-app.get("/ResultSheetAPI", async (req, res) => {
-    const studentsData = await Student.find();
-    res.send(studentsData);
+route.get('/ResultSheetAPI',(req, res) => {
+    res.status(200).send(jsonSheet)
 })
 
 // HOSTING
-app.listen(port, () => {
+route.listen(port, () => {
     console.log(`Server started at http://localhost:${port}`);
 })
 

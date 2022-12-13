@@ -56,8 +56,8 @@ submitButton.addEventListener('click', () => {
 //FETCHING STUDENT DATABASE
 const loadResult = async () => {
     try {
-        // const res = await fetch("https://macjuniorresult.herokuapp.com/ResultSheetAPI")
-        const res = await fetch('/ResultSheetAPI');
+        const res = await fetch("https://classresult-2ae26.web.app/ResultSheetAPI")
+        // const res = await fetch('http://localhost:5050/ResultSheetAPI');
         studentResult = await res.json();
         displayResult(studentResult);
     } catch (err) {

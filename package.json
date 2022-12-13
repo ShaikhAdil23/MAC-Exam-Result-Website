@@ -2,7 +2,7 @@
   "name": "javascript",
   "version": "1.0.0",
   "description": "MAC Result",
-  "main": "backend-database.js",
+  "main": "result.js",
   "scripts": {
     "nodemon": "nodemon backend-database.js",
     "start": "node backend-database.js"
@@ -12,8 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.2",
-    "heroku-ssl-redirect": "^0.1.1",
-    "mongoose": "^6.3.2",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.20",
+    "xlsx": "^0.18.0"
   }
 }
